@@ -55,7 +55,6 @@ private static final PostgreSQLContainer<?> POSTGRESQL_CONTAINER = new PostgreSQ
 
     @DynamicPropertySource
     static void containerProperties(DynamicPropertyRegistry registry) {
-        System.out.println("here");
         registry.add("spring.datasource.url", POSTGRESQL_CONTAINER::getJdbcUrl);
         registry.add("spring.datasource.username", POSTGRESQL_CONTAINER::getUsername);
         registry.add("spring.datasource.password", POSTGRESQL_CONTAINER::getPassword);
